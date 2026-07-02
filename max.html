@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Макс — ЖК Примерный</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(145deg, #f0f2f5 0%, #e6e9ed 100%);
+            padding: 20px;
+        }
+        .card {
+            background: #ffffff;
+            padding: 40px 36px 32px;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.10);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        .back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 16px;
+            transition: color 0.2s;
+        }
+        .back:hover {
+            color: #1a1a2e;
+        }
+        .icon-wrap {
+            background: #25d366;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.30);
+        }
+        .icon-wrap img {
+            width: 44px;
+            height: 44px;
+            filter: brightness(0) invert(1);
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+        .desc {
+            color: #6b7280;
+            font-size: 15px;
+            margin: 6px 0 24px;
+        }
+        .qr-code {
+            background: #f8f9fa;
+            padding: 16px;
+            border-radius: 16px;
+            display: inline-block;
+            border: 1px solid #eef2f6;
+        }
+        .qr-code img {
+            width: 200px;
+            height: 200px;
+            display: block;
+        }
+        .qr-label {
+            font-size: 13px;
+            color: #9ca3af;
+            margin-top: 12px;
+        }
+        .footer {
+            margin-top: 28px;
+            font-size: 13px;
+            color: #9ca3af;
+            border-top: 1px solid #f0f2f5;
+            padding-top: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <a href="index.html" class="back">← Назад</a>
+
+        <div class="icon-wrap">
+            <img src="images/whatsapp-icon.png" alt="WhatsApp" />
+        </div>
+        <h1>Связаться с Максом</h1>
+        <p class="desc">Напишите Максу в мессенджере</p>
+
+        <div class="qr-code">
+            <img src="images/qr-max.png" alt="QR-код Макса" />
+        </div>
+        <p class="qr-label">Наведите камеру, чтобы перейти</p>
+
+        <div class="footer">ЖК Примерный</div>
+    </div>
+</body>
+</html>
