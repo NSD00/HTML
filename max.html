@@ -43,7 +43,7 @@
             color: #1a1a2e;
         }
         .icon-wrap {
-            background: #25d366;
+            background: linear-gradient(145deg, #4a6cf7, #3651d4);
             width: 80px;
             height: 80px;
             border-radius: 50%;
@@ -51,7 +51,7 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto 16px;
-            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.30);
+            box-shadow: 0 8px 24px rgba(74, 108, 247, 0.30);
         }
         .icon-wrap img {
             width: 44px;
@@ -66,7 +66,29 @@
         .desc {
             color: #6b7280;
             font-size: 15px;
-            margin: 6px 0 24px;
+            margin: 6px 0 8px;
+        }
+        .store-links {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin: 16px 0 24px;
+        }
+        .store-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            background: #1a1a2e;
+            color: #fff;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .store-btn:hover {
+            background: #2d2d44;
         }
         .qr-code {
             background: #f8f9fa;
@@ -99,15 +121,20 @@
         <a href="index.html" class="back">← Назад</a>
 
         <div class="icon-wrap">
-            <img src="images/whatsapp-icon.png" alt="WhatsApp" />
+            <img src="images/max-icon.png" alt="Макс" />
         </div>
-        <h1>Связаться с Максом</h1>
-        <p class="desc">Напишите Максу в мессенджере</p>
+        <h1>Мессенджер Макс</h1>
+        <p class="desc">Скачайте приложение для общения</p>
+
+        <div class="store-links">
+            <a href="https://apps.apple.com/ru/app/макс" class="store-btn" target="_blank">📱 App Store</a>
+            <a href="https://play.google.com/store/apps/details?id=ru.max.messenger" class="store-btn" target="_blank">📱 Google Play</a>
+        </div>
 
         <div class="qr-code">
-            <img src="images/qr-max.png" alt="QR-код Макса" />
+            <img src="images/qr-max.png" alt="QR-код Макс" />
         </div>
-        <p class="qr-label">Наведите камеру, чтобы перейти</p>
+        <p class="qr-label">Наведите камеру для скачивания</p>
 
         <div class="footer">ЖК Примерный</div>
     </div>
