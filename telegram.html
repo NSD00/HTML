@@ -62,15 +62,15 @@
             background-color: white;
             padding: 3px;
         }
+        .desc {
+            color: #6b7280;
+            font-size: 15px;
+            margin: 0 0 4px 0;
+        }
         h1 {
             font-size: 24px;
             font-weight: 700;
             color: #1a1a2e;
-        }
-        .desc {
-            color: #6b7280;
-            font-size: 15px;
-            margin: 6px 0 24px;
         }
         .qr-wrapper {
             display: inline-block;
@@ -80,6 +80,7 @@
             border: 1px solid #eef2f6;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             cursor: pointer;
+            margin-top: 20px;
         }
         .qr-wrapper:hover {
             transform: scale(1.02);
@@ -109,8 +110,20 @@
             color: #6b7280;
             margin-top: 4px;
         }
+        .instruction {
+            font-size: 14px;
+            color: #4b5563;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #f0f2f5;
+            line-height: 1.5;
+        }
+        .instruction strong {
+            color: #1a1a2e;
+            font-weight: 600;
+        }
         .footer {
-            margin-top: 28px;
+            margin-top: 20px;
             font-size: 13px;
             color: #9ca3af;
             border-top: 1px solid #f0f2f5;
@@ -125,18 +138,25 @@
         <div class="icon-wrap">
             <img src="images/icon-telegram.png" alt="Telegram" />
         </div>
+
         <p class="desc">Присоединяйтесь к нашему чату в</p>
-        <h1>Telegram</h1>        
+        <h1>Telegram</h1>
 
         <div class="qr-wrapper">
             <a href="https://t.me/Yakobi_Park" target="_blank">
                 <img src="images/qr-telegram.png" alt="QR-код Telegram" />
             </a>
         </div>
+
         <p class="qr-label">
             Наведите камеру или кликните по QR-коду
             <br /><span>для перехода в чат</span>
         </p>
+
+        <div class="instruction">
+            <strong>Чтобы попасть в чат своего дома,</strong><br />
+            воспользуйтесь вкладкой «Чаты домов» в общем чате.
+        </div>
 
         <div class="footer">ЖК «Якоби-Парк»</div>
     </div>
