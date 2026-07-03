@@ -28,9 +28,12 @@
             max-width: 420px;
             width: 100%;
         }
-        .logo {
-            font-size: 48px;
-            margin-bottom: 4px;
+        .logo img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 8px;
+            object-fit: cover;
         }
         h1 {
             font-size: 28px;
@@ -94,7 +97,9 @@
 </head>
 <body>
     <div class="card">
-        <div class="logo">images/icon-comlex.png</div>
+        <div class="logo">
+            <img src="images/icon-complex.png" alt="ЖК Примерный" />
+        </div>
         <h1>ЖК Примерный</h1>
         <p class="subtitle">Выберите желаемый мессенджер</p>
 
@@ -105,7 +110,7 @@
             </a>
             <a href="max.html" class="btn btn-max">
                 <img src="images/icon-max.png" alt="Макс" />
-                Макс1
+                Макс
             </a>
         </div>
 
