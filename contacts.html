@@ -21,14 +21,14 @@
         }
         .card {
             background: #ffffff;
-            max-width: 680px;
+            max-width: 860px;
             width: 100%;
             border-radius: 32px;
             padding: 32px 38px 38px;
             box-shadow: 0 24px 64px rgba(0, 0, 0, 0.08), 0 8px 20px rgba(0, 0, 0, 0.05);
         }
 
-        /* ===== Шапка ===== */
+        /* ===== Шапка (как в правилах) ===== */
         .header-row {
             display: flex;
             align-items: center;
@@ -37,6 +37,9 @@
             border-bottom: 1px solid #f0f2f5;
             padding-bottom: 18px;
             flex-wrap: wrap;
+        }
+        .logo-wrap {
+            flex-shrink: 0;
         }
         .logo-wrap img {
             width: 64px;
@@ -59,15 +62,15 @@
             color: #6b7280;
         }
 
-        /* ===== ОДИН УНИВЕРСАЛЬНЫЙ КЛАСС (как в правилах) ===== */
-        .contact {
+        /* ===== ТОЧНО КАК В rules.html (.block) ===== */
+        .block {
             background: #f8fafc;
             border-radius: 16px;
             padding: 16px 20px;
             margin: 12px 0 14px 0;
             border-left: 5px solid #2aabee;
         }
-        .contact .name {
+        .block h4 {
             font-size: 15px;
             font-weight: 700;
             color: #1f2937;
@@ -76,46 +79,38 @@
             align-items: center;
             gap: 8px;
         }
-        .contact .phone-row {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin: 4px 0 2px 0;
-        }
-        .contact .phone-row .icon {
-            font-size: 18px;
-            line-height: 1;
-        }
-        .contact .phone-row .icon.emergency {
-            color: #ef4444;
-        }
-        .contact .phone-row .number {
-            font-size: 18px;
-            font-weight: 600;
-            color: #1a1a2e;
-            text-decoration: none;
-        }
-        .contact .phone-row .number:hover {
-            color: #2aabee;
-        }
-        .contact .note {
+        .block p,
+        .block li {
             font-size: 15px;
             line-height: 1.6;
             color: #2d3a4a;
-            margin-top: 2px;
         }
-        .contact .note a {
+        .block p {
+            margin-bottom: 6px;
+        }
+        .block p:last-child {
+            margin-bottom: 0;
+        }
+        .block ul {
+            padding-left: 20px;
+            margin: 4px 0 2px 0;
+        }
+        .block ul li {
+            margin-bottom: 4px;
+            list-style-type: disc;
+        }
+        .block ul li:last-child {
+            margin-bottom: 0;
+        }
+        .block a {
             color: #2aabee;
             text-decoration: none;
         }
-        .contact .note a:hover {
+        .block a:hover {
             text-decoration: underline;
         }
-        .contact .note + .note {
-            margin-top: 0;
-        }
 
-        /* ===== Футер ===== */
+        /* ===== Футер (как в правилах) ===== */
         .footer-note {
             margin-top: 28px;
             font-size: 13px;
@@ -146,17 +141,8 @@
                 width: 52px;
                 height: 52px;
             }
-            .contact {
+            .block {
                 padding: 14px 16px;
-            }
-            .contact .phone-row .number {
-                font-size: 16px;
-            }
-            .contact .name {
-                font-size: 14px;
-            }
-            .contact .note {
-                font-size: 14px;
             }
         }
     </style>
@@ -175,82 +161,59 @@
         </div>
 
         <!-- ===== КОНТАКТЫ ===== -->
+        <!-- ВСЁ ТОЧНО КАК В rules.html — .block + style="border-left-color: ..." -->
 
-        <div class="contact" style="border-left-color: #ef4444;">
-            <div class="name">🚨 Аварийно-диспетчерская служба</div>
-            <div class="phone-row">
-                <span class="icon emergency">☎️</span>
-                <a href="tel:+73952706464" class="number">+7(3952)70-64-64</a>
-            </div>
-            <div class="note">Круглосуточно</div>
+        <div class="block" style="border-left-color: #ef4444;">
+            <h4>🚨 Аварийно-диспетчерская служба</h4>
+            <p>☎️ <a href="tel:+73952706464">+7(3952)70-64-64</a></p>
+            <p style="color: #6b7280; font-size: 14px;">Круглосуточно</p>
         </div>
 
-        <div class="contact" style="border-left-color: #facc15;">
-            <div class="name">⚡️ Энергосбыт</div>
-            <div class="phone-row">
-                <span class="icon">☎️</span>
-                <a href="tel:+73952790777" class="number">+7(3952)790-777</a>
-            </div>
-            <div class="note">Отключение электроэнергии</div>
+        <div class="block" style="border-left-color: #facc15;">
+            <h4>⚡️ Энергосбыт</h4>
+            <p>☎️ <a href="tel:+73952790777">+7(3952)790-777</a></p>
+            <p style="color: #6b7280; font-size: 14px;">Отключение электроэнергии</p>
         </div>
 
-        <div class="contact" style="border-left-color: #06b6d4;">
-            <div class="name">🛗 Лифтовый сервис</div>
-            <div class="phone-row">
-                <span class="icon emergency">☎️</span>
-                <a href="tel:+73952406080" class="number">+7(3952)40-60-80</a>
-            </div>
-            <div class="note">Круглосуточно</div>
+        <div class="block" style="border-left-color: #06b6d4;">
+            <h4>🛗 Лифтовый сервис</h4>
+            <p>☎️ <a href="tel:+73952406080">+7(3952)40-60-80</a></p>
+            <p style="color: #6b7280; font-size: 14px;">Круглосуточно</p>
         </div>
 
-        <div class="contact" style="border-left-color: #8b5cf6;">
-            <div class="name">🏢 УКМ «Регион Сибири»</div>
-            <div class="phone-row">
-                <span class="icon">📞</span>
-                <a href="tel:+73952566995" class="number">+7(3952)56-69-95</a>
-            </div>
-            <div class="note">с 08:00 до 17:00, обед с 12:00 до 13:00</div>
-            <div class="note">✉️ <a href="mailto:region-sibiri@bk.ru">region-sibiri@bk.ru</a></div>
-            <div class="note">🌐 <a href="https://xn--80abq2a2bs.xn--p1ai/" target="_blank">https://xn--80abq2a2bs.xn--p1ai/</a></div>
+        <div class="block" style="border-left-color: #8b5cf6;">
+            <h4>🏢 УКМ «Регион Сибири»</h4>
+            <p>📞 <a href="tel:+73952566995">+7(3952)56-69-95</a></p>
+            <p style="color: #6b7280; font-size: 14px;">с 08:00 до 17:00, обед с 12:00 до 13:00</p>
+            <p>✉️ <a href="mailto:region-sibiri@bk.ru">region-sibiri@bk.ru</a></p>
+            <p>🌐 <a href="https://xn--80abq2a2bs.xn--p1ai/" target="_blank">https://регион-сибири.рф</a></p>
         </div>
 
-        <div class="contact" style="border-left-color: #ef4444;">
-            <div class="name">🏛️ Единая дежурная диспетчерская служба г. Иркутска</div>
-            <div class="phone-row">
-                <span class="icon emergency">☎️</span>
-                <a href="tel:+73952520112" class="number">+7(3952)520-112</a>
-            </div>
-            <div class="note">Координация действий аварийных служб города по жилищно-коммунальному хозяйству</div>
+        <div class="block" style="border-left-color: #ef4444;">
+            <h4>🏛️ Единая дежурная диспетчерская служба г. Иркутска</h4>
+            <p>☎️ <a href="tel:+73952520112">+7(3952)520-112</a></p>
+            <p style="color: #6b7280; font-size: 14px;">Координация действий аварийных служб города по жилищно-коммунальному хозяйству</p>
         </div>
 
-        <div class="contact" style="border-left-color: #22c55e;">
-            <div class="name">🏥 Взрослая поликлиника</div>
-            <div class="phone-row">
-                <span class="icon">📞</span>
-                <a href="tel:+73952466627" class="number">+7(3952)46-66-27</a>
-            </div>
-            <div class="note">мкр. Юбилейный, д. 35</div>
-            <div class="note">🌐 <a href="https://irk-gb6.gosuslugi.ru/" target="_blank">https://irk-gb6.gosuslugi.ru/</a></div>
+        <div class="block" style="border-left-color: #22c55e;">
+            <h4>🏥 Взрослая поликлиника</h4>
+            <p>📞 <a href="tel:+73952466627">+7(3952)46-66-27</a></p>
+            <p style="color: #6b7280; font-size: 14px;">мкр. Юбилейный, д. 35</p>
+            <p>🌐 <a href="https://irk-gb6.gosuslugi.ru/" target="_blank">https://irk-gb6.gosuslugi.ru/</a></p>
         </div>
 
-        <div class="contact" style="border-left-color: #22c55e;">
-            <div class="name">👶 Детская поликлиника</div>
-            <div class="phone-row">
-                <span class="icon">📞</span>
-                <a href="tel:+73952505105" class="number">+7(3952)505-105</a>
-            </div>
-            <div class="note">ул. Академическая, д. 60</div>
-            <div class="note">Вторник - день здорового ребёнка</div>
-            <div class="note">🌐 <a href="https://irgdp6.gosuslugi.ru/" target="_blank">https://irgdp6.gosuslugi.ru/</a></div>
+        <div class="block" style="border-left-color: #22c55e;">
+            <h4>👶 Детская поликлиника</h4>
+            <p>📞 <a href="tel:+73952505105">+7(3952)505-105</a></p>
+            <p style="color: #6b7280; font-size: 14px;">ул. Академическая, д. 60</p>
+            <p style="color: #6b7280; font-size: 14px;">Вторник - день здорового ребёнка</p>
+            <p>🌐 <a href="https://irgdp6.gosuslugi.ru/" target="_blank">https://irgdp6.gosuslugi.ru/</a></p>
         </div>
 
-        <div class="contact" style="border-left-color: #f59e0b;">
-            <div class="name">👮 Дежурный отдела полиции ОП-2</div>
-            <div class="phone-row">
-                <span class="icon">📞</span>
-                <a href="tel:+73952420451" class="number">+7(3952)42-04-51</a>
-            </div>
-            <div class="note">ул. Бродского, д. 2а</div>
+        <div class="block" style="border-left-color: #f59e0b;">
+            <h4>👮 Дежурный отдела полиции ОП-2</h4>
+            <p>📞 <a href="tel:+73952420451">+7(3952)42-04-51</a></p>
+            <p style="color: #6b7280; font-size: 14px;">ул. Бродского, д. 2а</p>
         </div>
 
         <!-- ===== ФУТЕР ===== -->
