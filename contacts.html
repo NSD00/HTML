@@ -27,8 +27,6 @@
             padding: 32px 38px 38px;
             box-shadow: 0 24px 64px rgba(0, 0, 0, 0.08), 0 8px 20px rgba(0, 0, 0, 0.05);
         }
-
-        /* ===== Шапка ===== */
         .header-row {
             display: flex;
             align-items: center;
@@ -37,9 +35,6 @@
             border-bottom: 1px solid #f0f2f5;
             padding-bottom: 18px;
             flex-wrap: wrap;
-        }
-        .logo-wrap {
-            flex-shrink: 0;
         }
         .logo-wrap img {
             width: 64px;
@@ -61,8 +56,6 @@
             font-size: 14px;
             color: #6b7280;
         }
-
-        /* ===== .block ===== */
         .block {
             background: #f8fafc;
             border-radius: 16px;
@@ -79,38 +72,11 @@
             align-items: center;
             gap: 8px;
         }
-        .block p,
-        .block li {
+        .block p {
             font-size: 15px;
             line-height: 1.6;
             color: #2d3a4a;
         }
-        .block p {
-            margin-bottom: 6px;
-        }
-        .block p:last-child {
-            margin-bottom: 0;
-        }
-        .block ul {
-            padding-left: 20px;
-            margin: 4px 0 2px 0;
-        }
-        .block ul li {
-            margin-bottom: 4px;
-            list-style-type: disc;
-        }
-        .block ul li:last-child {
-            margin-bottom: 0;
-        }
-        .block a {
-            color: #2aabee;
-            text-decoration: none;
-        }
-        .block a:hover {
-            text-decoration: underline;
-        }
-
-        /* ===== НОМЕР ТЕЛЕФОНА КРУПНЕЕ ===== */
         .block .phone {
             font-size: 20px;
             font-weight: 600;
@@ -122,21 +88,20 @@
         }
         .block .phone a:hover {
             color: #2aabee;
-            text-decoration: underline;
         }
-
-        /* ===== Доп. информация мелким шрифтом ===== */
         .block .note {
             font-size: 14px;
             color: #6b7280;
             line-height: 1.5;
             margin-top: 2px;
         }
-        .block .note:last-child {
-            margin-bottom: 0;
+        .block a {
+            color: #2aabee;
+            text-decoration: none;
         }
-
-        /* ===== Футер ===== */
+        .block a:hover {
+            text-decoration: underline;
+        }
         .footer-note {
             margin-top: 28px;
             font-size: 13px;
@@ -152,7 +117,6 @@
             font-size: 12px;
             color: #475569;
         }
-
         @media (max-width: 550px) {
             .card {
                 padding: 20px 16px;
@@ -178,7 +142,6 @@
 </head>
 <body>
     <div class="card">
-        <!-- ===== ШАПКА ===== -->
         <div class="header-row">
             <div class="logo-wrap">
                 <img src="images/logo-complex.png" alt="ЖК «Якоби-Парк»" />
@@ -189,62 +152,59 @@
             </div>
         </div>
 
-        <!-- ===== КОНТАКТЫ ===== -->
-
         <div class="block" style="border-left-color: #ef4444;">
             <h4>🚨 Аварийно-диспетчерская служба</h4>
-            <p class="phone"><a href="tel:+73952706464">+7(3952)70-64-64</a></p>
+            <p class="phone"><span style="color:#ef4444;">☎️</span> <a href="tel:+73952706464">+7(3952)70-64-64</a></p>
             <p class="note">Круглосуточно</p>
         </div>
 
         <div class="block" style="border-left-color: #facc15;">
             <h4>⚡️ Энергосбыт</h4>
-            <p class="phone"><a href="tel:+73952790777">+7(3952)790-777</a></p>
+            <p class="phone">📞 <a href="tel:+73952790777">+7(3952)790-777</a></p>
             <p class="note">Отключение электроэнергии</p>
         </div>
 
         <div class="block" style="border-left-color: #06b6d4;">
             <h4>🛗 Лифтовый сервис</h4>
-            <p class="phone"><a href="tel:+73952406080">+7(3952)40-60-80</a></p>
+            <p class="phone"><span style="color:#ef4444;">☎️</span> <a href="tel:+73952406080">+7(3952)40-60-80</a></p>
             <p class="note">Круглосуточно</p>
         </div>
 
         <div class="block" style="border-left-color: #8b5cf6;">
             <h4>🏢 УКМ «Регион Сибири»</h4>
-            <p class="phone"><a href="tel:+73952566995">+7(3952)56-69-95</a></p>
+            <p class="phone">📞 <a href="tel:+73952566995">+7(3952)56-69-95</a></p>
             <p class="note">с 08:00 до 17:00, обед с 12:00 до 13:00</p>
-            <p style="margin-top: 4px;">✉️ <a href="mailto:region-sibiri@bk.ru">region-sibiri@bk.ru</a></p>
+            <p style="margin-top:4px;">✉️ <a href="mailto:region-sibiri@bk.ru">region-sibiri@bk.ru</a></p>
             <p>🌐 <a href="https://xn--80abq2a2bs.xn--p1ai/" target="_blank">https://регион-сибири.рф</a></p>
         </div>
 
         <div class="block" style="border-left-color: #ef4444;">
             <h4>🏛️ Единая дежурная диспетчерская служба г. Иркутска</h4>
-            <p class="phone"><a href="tel:+73952520112">+7(3952)520-112</a></p>
+            <p class="phone"><span style="color:#ef4444;">☎️</span> <a href="tel:+73952520112">+7(3952)520-112</a></p>
             <p class="note">Координация действий аварийных служб города по жилищно-коммунальному хозяйству</p>
         </div>
 
         <div class="block" style="border-left-color: #22c55e;">
             <h4>🏥 Взрослая поликлиника</h4>
-            <p class="phone"><a href="tel:+73952466627">+7(3952)46-66-27</a></p>
+            <p class="phone">📞 <a href="tel:+73952466627">+7(3952)46-66-27</a></p>
             <p class="note">мкр. Юбилейный, д. 35</p>
-            <p style="margin-top: 4px;">🌐 <a href="https://irk-gb6.gosuslugi.ru/" target="_blank">https://irk-gb6.gosuslugi.ru/</a></p>
+            <p style="margin-top:4px;">🌐 <a href="https://irk-gb6.gosuslugi.ru/" target="_blank">https://irk-gb6.gosuslugi.ru/</a></p>
         </div>
 
         <div class="block" style="border-left-color: #22c55e;">
             <h4>👶 Детская поликлиника</h4>
-            <p class="phone"><a href="tel:+73952505105">+7(3952)505-105</a></p>
+            <p class="phone">📞 <a href="tel:+73952505105">+7(3952)505-105</a></p>
             <p class="note">ул. Академическая, д. 60</p>
             <p class="note">Вторник - день здорового ребёнка</p>
-            <p style="margin-top: 4px;">🌐 <a href="https://irgdp6.gosuslugi.ru/" target="_blank">https://irgdp6.gosuslugi.ru/</a></p>
+            <p style="margin-top:4px;">🌐 <a href="https://irgdp6.gosuslugi.ru/" target="_blank">https://irgdp6.gosuslugi.ru/</a></p>
         </div>
 
         <div class="block" style="border-left-color: #f59e0b;">
             <h4>👮 Дежурный отдела полиции ОП-2</h4>
-            <p class="phone"><a href="tel:+73952420451">+7(3952)42-04-51</a></p>
+            <p class="phone">📞 <a href="tel:+73952420451">+7(3952)42-04-51</a></p>
             <p class="note">ул. Бродского, д. 2а</p>
         </div>
 
-        <!-- ===== ФУТЕР ===== -->
         <div class="footer-note">
             <span>ЖК «Якоби-Парк» • Живу на берегу</span>
         </div>
