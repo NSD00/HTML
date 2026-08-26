@@ -21,7 +21,7 @@
         }
         .card {
             background: #ffffff;
-            max-width: 700px;
+            max-width: 680px;
             width: 100%;
             border-radius: 32px;
             padding: 32px 38px 38px;
@@ -63,87 +63,65 @@
         }
 
         /* ===== Контакты ===== */
-        .contact-block {
-            background: #f8fafc;
-            border-radius: 16px;
-            padding: 16px 20px;
-            margin: 12px 0 14px 0;
-            border-left: 5px solid #2aabee;
+        .contact {
+            padding: 14px 0;
+            border-bottom: 1px solid #f0f2f5;
         }
-        .contact-block.emergency {
-            border-left-color: #ef4444;
+        .contact:last-of-type {
+            border-bottom: none;
         }
-        .contact-block.management {
-            border-left-color: #8b5cf6;
-        }
-        .contact-block.medical {
-            border-left-color: #22c55e;
-        }
-        .contact-block.police {
-            border-left-color: #f59e0b;
-        }
-        .contact-block h3 {
+
+        .contact .name {
             font-size: 16px;
             font-weight: 700;
-            color: #1f2937;
-            margin-bottom: 8px;
-        }
-        .contact-block p {
-            font-size: 15px;
-            line-height: 1.8;
-            color: #2d3a4a;
+            color: #1a1a2e;
             margin-bottom: 2px;
         }
-        .contact-block .note {
+
+        .contact .phone-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 4px 0 2px 0;
+        }
+        .contact .phone-row .icon {
+            font-size: 18px;
+            line-height: 1;
+        }
+        .contact .phone-row .icon.emergency {
+            color: #ef4444;
+        }
+        .contact .phone-row .number {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a2e;
+            text-decoration: none;
+        }
+        .contact .phone-row .number:hover {
+            color: #2aabee;
+        }
+
+        .contact .note {
             font-size: 14px;
             color: #6b7280;
+            line-height: 1.5;
             margin-top: 2px;
         }
-        .contact-block a {
+        .contact .note a {
             color: #2aabee;
             text-decoration: none;
         }
-        .contact-block a:hover {
+        .contact .note a:hover {
             text-decoration: underline;
-        }
-
-        /* ===== Навигация между страницами ===== */
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 24px;
-            padding-top: 18px;
-            border-top: 1px solid #edf2f7;
-            flex-wrap: wrap;
-        }
-        .nav-link {
-            padding: 8px 20px;
-            border-radius: 60px;
-            font-size: 15px;
-            font-weight: 600;
-            color: #6b7280;
-            text-decoration: none;
-            background: #f1f5f9;
-            transition: all 0.2s ease;
-        }
-        .nav-link:hover {
-            background: #e2e8f0;
-            color: #1f2937;
-        }
-        .nav-link.active {
-            background: #2aabee;
-            color: #ffffff;
-        }
-        .nav-link.active:hover {
-            background: #1b8bc9;
         }
 
         /* ===== Футер ===== */
         .footer-note {
-            margin-top: 18px;
+            margin-top: 24px;
             font-size: 13px;
             color: #9ca3af;
+            border-top: 1px solid #edf2f7;
+            padding-top: 18px;
             text-align: center;
         }
         .footer-note span {
@@ -169,12 +147,11 @@
                 width: 52px;
                 height: 52px;
             }
-            .contact-block {
-                padding: 14px 16px;
+            .contact .phone-row .number {
+                font-size: 18px;
             }
-            .nav-link {
-                font-size: 14px;
-                padding: 6px 16px;
+            .contact .name {
+                font-size: 15px;
             }
         }
     </style>
@@ -192,54 +169,91 @@
             </div>
         </div>
 
-        <!-- ===== АВАРИЙНЫЕ СЛУЖБЫ ===== -->
-        <div class="contact-block emergency">
-            <h3>🚨 Аварийные службы</h3>
-            <p>☎️ <a href="tel:+73952706464">+7(3952)70-64-64</a> — Аварийно-диспетчерская служба</p>
-            <p class="note">Круглосуточно</p>
-            <p style="margin-top: 6px;">🧰 <a href="tel:+73952406080">+7(3952)40-60-80</a> — Лифтовый сервис</p>
-            <p class="note">Круглосуточно</p>
-            <p style="margin-top: 6px;">⚡️ <a href="tel:+73952790777">+7(3952)790-777</a> — Энергосбыт</p>
-            <p class="note">Отключение электроэнергии, показания</p>
+        <!-- ===== КОНТАКТЫ ===== -->
+
+        <!-- АДС -->
+        <div class="contact">
+            <div class="name">🚨 Аварийно-диспетчерская служба</div>
+            <div class="phone-row">
+                <span class="icon emergency">📞</span>
+                <a href="tel:+73952706464" class="number">+7(3952)70-64-64</a>
+            </div>
+            <div class="note">Круглосуточно</div>
         </div>
 
-        <!-- ===== УПРАВЛЯЮЩАЯ КОМПАНИЯ ===== -->
-        <div class="contact-block management">
-            <h3>🏢 Управляющая компания</h3>
-            <p><strong>ООО УКМ «Регион Сибири»</strong></p>
-            <p>📞 <a href="tel:+73952566995">+7(3952)56-69-95</a></p>
-            <p class="note">с 08:00 до 17:00, обед с 12:00 до 13:00</p>
-            <p style="margin-top: 4px;">✉️ <a href="mailto:region-sibiri@bk.ru">region-sibiri@bk.ru</a></p>
-            <p>🌐 <a href="https://xn--80abq2a2bs.xn--p1ai/" target="_blank">https://регион-сибири.рф</a></p>
+        <!-- Энергосбыт -->
+        <div class="contact">
+            <div class="name">⚡️ Энергосбыт</div>
+            <div class="phone-row">
+                <span class="icon">📞</span>
+                <a href="tel:+73952790777" class="number">+7(3952)790-777</a>
+            </div>
+            <div class="note">Отключение электроэнергии, показания</div>
         </div>
 
-        <!-- ===== МЕДИЦИНСКИЕ УЧРЕЖДЕНИЯ ===== -->
-        <div class="contact-block medical">
-            <h3>🏥 Медицинские учреждения</h3>
-            <p><strong>👨‍⚕️ Взрослая поликлиника</strong></p>
-            <p>📞 <a href="tel:+73952466627">+7(3952)46-66-27</a></p>
-            <p class="note">мкр. Юбилейный, д. 35</p>
-            <p>🌐 <a href="https://irk-gb6.gosuslugi.ru/" target="_blank">https://irk-gb6.gosuslugi.ru/</a></p>
-
-            <p style="margin-top: 10px;"><strong>👶 Детская поликлиника</strong></p>
-            <p>📞 <a href="tel:+73952505105">+7(3952)505-105</a></p>
-            <p class="note">ул. Академическая, д. 60</p>
-            <p class="note">Вторник — день здорового ребёнка</p>
-            <p>🌐 <a href="https://irgdp6.gosuslugi.ru/" target="_blank">https://irgdp6.gosuslugi.ru/</a></p>
+        <!-- Лифтовый сервис -->
+        <div class="contact">
+            <div class="name">🛗 Лифтовый сервис</div>
+            <div class="phone-row">
+                <span class="icon emergency">📞</span>
+                <a href="tel:+73952406080" class="number">+7(3952)40-60-80</a>
+            </div>
+            <div class="note">Круглосуточно</div>
         </div>
 
-        <!-- ===== ПРАВОПОРЯДОК ===== -->
-        <div class="contact-block police">
-            <h3>👮 Правопорядок</h3>
-            <p><strong>Дежурный отдела полиции ОП-2</strong></p>
-            <p>📞 <a href="tel:+73952420451">+7(3952)42-04-51</a></p>
-            <p class="note">ул. Бродского, д. 2а</p>
+        <!-- УК -->
+        <div class="contact">
+            <div class="name">🏢 УКМ «Регион Сибири»</div>
+            <div class="phone-row">
+                <span class="icon">📞</span>
+                <a href="tel:+73952566995" class="number">+7(3952)56-69-95</a>
+            </div>
+            <div class="note">с 08:00 до 17:00, обед с 12:00 до 13:00</div>
+            <div class="note">✉️ <a href="mailto:region-sibiri@bk.ru">region-sibiri@bk.ru</a></div>
+            <div class="note">🌐 <a href="https://xn--80abq2a2bs.xn--p1ai/" target="_blank">https://регион-сибири.рф</a></div>
         </div>
 
-        <!-- ===== НАВИГАЦИЯ ===== -->
-        <div class="nav-links">
-            <a href="rules.html" class="nav-link">📋 Правила чата</a>
-            <a href="contacts.html" class="nav-link active">📞 Полезные телефоны</a>
+        <!-- ЕДДС -->
+        <div class="contact">
+            <div class="name">🏛️ Единая дежурная диспетчерская служба г. Иркутска</div>
+            <div class="phone-row">
+                <span class="icon emergency">📞</span>
+                <a href="tel:+73952520112" class="number">+7(3952)520-112</a>
+            </div>
+            <div class="note">Координация действий аварийных служб города по жилищно-коммунальному хозяйству</div>
+        </div>
+
+        <!-- Взрослая поликлиника -->
+        <div class="contact">
+            <div class="name">🏥 Взрослая поликлиника</div>
+            <div class="phone-row">
+                <span class="icon">📞</span>
+                <a href="tel:+73952466627" class="number">+7(3952)46-66-27</a>
+            </div>
+            <div class="note">мкр. Юбилейный, д. 35</div>
+            <div class="note">🌐 <a href="https://irk-gb6.gosuslugi.ru/" target="_blank">https://irk-gb6.gosuslugi.ru/</a></div>
+        </div>
+
+        <!-- Детская поликлиника -->
+        <div class="contact">
+            <div class="name">👶 Детская поликлиника</div>
+            <div class="phone-row">
+                <span class="icon">📞</span>
+                <a href="tel:+73952505105" class="number">+7(3952)505-105</a>
+            </div>
+            <div class="note">ул. Академическая, д. 60</div>
+            <div class="note">Вторник — день здорового ребёнка</div>
+            <div class="note">🌐 <a href="https://irgdp6.gosuslugi.ru/" target="_blank">https://irgdp6.gosuslugi.ru/</a></div>
+        </div>
+
+        <!-- ОП-2 -->
+        <div class="contact">
+            <div class="name">👮 Дежурный отдела полиции ОП-2</div>
+            <div class="phone-row">
+                <span class="icon">📞</span>
+                <a href="tel:+73952420451" class="number">+7(3952)42-04-51</a>
+            </div>
+            <div class="note">ул. Бродского, д. 2а</div>
         </div>
 
         <!-- ===== ФУТЕР ===== -->
