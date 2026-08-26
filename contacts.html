@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Контакты · ЖК «Якоби-Парк»</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: linear-gradient(145deg, #f0f2f5 0%, #e6e9ed 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 20px;
+        }
+        .card {
+            background: #ffffff;
+            max-width: 700px;
+            width: 100%;
+            border-radius: 32px;
+            padding: 32px 38px 38px;
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.08), 0 8px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        /* ===== Шапка ===== */
+        .header-row {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #f0f2f5;
+            padding-bottom: 18px;
+            flex-wrap: wrap;
+        }
+        .logo-wrap {
+            flex-shrink: 0;
+        }
+        .logo-wrap img {
+            width: 64px;
+            height: 64px;
+            object-fit: cover;
+            border-radius: 50%;
+            background: white;
+            border: 2px solid #eef0f3;
+            padding: 4px;
+        }
+        .title-group h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a2e;
+            letter-spacing: -0.3px;
+            line-height: 1.2;
+        }
+        .title-group .sub {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        /* ===== Контакты ===== */
+        .contact-block {
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin: 12px 0 14px 0;
+            border-left: 5px solid #2aabee;
+        }
+        .contact-block.emergency {
+            border-left-color: #ef4444;
+        }
+        .contact-block.management {
+            border-left-color: #8b5cf6;
+        }
+        .contact-block.medical {
+            border-left-color: #22c55e;
+        }
+        .contact-block.police {
+            border-left-color: #f59e0b;
+        }
+        .contact-block h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+        .contact-block p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #2d3a4a;
+            margin-bottom: 2px;
+        }
+        .contact-block .note {
+            font-size: 14px;
+            color: #6b7280;
+            margin-top: 2px;
+        }
+        .contact-block a {
+            color: #2aabee;
+            text-decoration: none;
+        }
+        .contact-block a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== Навигация между страницами ===== */
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 24px;
+            padding-top: 18px;
+            border-top: 1px solid #edf2f7;
+            flex-wrap: wrap;
+        }
+        .nav-link {
+            padding: 8px 20px;
+            border-radius: 60px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #6b7280;
+            text-decoration: none;
+            background: #f1f5f9;
+            transition: all 0.2s ease;
+        }
+        .nav-link:hover {
+            background: #e2e8f0;
+            color: #1f2937;
+        }
+        .nav-link.active {
+            background: #2aabee;
+            color: #ffffff;
+        }
+        .nav-link.active:hover {
+            background: #1b8bc9;
+        }
+
+        /* ===== Футер ===== */
+        .footer-note {
+            margin-top: 18px;
+            font-size: 13px;
+            color: #9ca3af;
+            text-align: center;
+        }
+        .footer-note span {
+            background: #f1f5f9;
+            padding: 4px 14px;
+            border-radius: 60px;
+            font-size: 12px;
+            color: #475569;
+        }
+
+        /* ===== Адаптив ===== */
+        @media (max-width: 550px) {
+            .card {
+                padding: 20px 16px;
+            }
+            .header-row {
+                gap: 12px;
+            }
+            .title-group h1 {
+                font-size: 20px;
+            }
+            .logo-wrap img {
+                width: 52px;
+                height: 52px;
+            }
+            .contact-block {
+                padding: 14px 16px;
+            }
+            .nav-link {
+                font-size: 14px;
+                padding: 6px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <!-- ===== ШАПКА ===== -->
+        <div class="header-row">
+            <div class="logo-wrap">
+                <img src="images/logo-complex.png" alt="ЖК «Якоби-Парк»" />
+            </div>
+            <div class="title-group">
+                <h1>ЖК «Якоби-Парк»</h1>
+                <div class="sub">Полезные телефоны и контакты</div>
+            </div>
+        </div>
+
+        <!-- ===== АВАРИЙНЫЕ СЛУЖБЫ ===== -->
+        <div class="contact-block emergency">
+            <h3>🚨 Аварийные службы</h3>
+            <p>☎️ <a href="tel:+73952706464">+7(3952)70-64-64</a> — Аварийно-диспетчерская служба</p>
+            <p class="note">Круглосуточно</p>
+            <p style="margin-top: 6px;">🧰 <a href="tel:+73952406080">+7(3952)40-60-80</a> — Лифтовый сервис</p>
+            <p class="note">Круглосуточно</p>
+            <p style="margin-top: 6px;">⚡️ <a href="tel:+73952790777">+7(3952)790-777</a> — Энергосбыт</p>
+            <p class="note">Отключение электроэнергии, показания</p>
+        </div>
+
+        <!-- ===== УПРАВЛЯЮЩАЯ КОМПАНИЯ ===== -->
+        <div class="contact-block management">
+            <h3>🏢 Управляющая компания</h3>
+            <p><strong>ООО УКМ «Регион Сибири»</strong></p>
+            <p>📞 <a href="tel:+73952566995">+7(3952)56-69-95</a></p>
+            <p class="note">с 08:00 до 17:00, обед с 12:00 до 13:00</p>
+            <p style="margin-top: 4px;">✉️ <a href="mailto:region-sibiri@bk.ru">region-sibiri@bk.ru</a></p>
+            <p>🌐 <a href="https://xn--80abq2a2bs.xn--p1ai/" target="_blank">https://регион-сибири.рф</a></p>
+        </div>
+
+        <!-- ===== МЕДИЦИНСКИЕ УЧРЕЖДЕНИЯ ===== -->
+        <div class="contact-block medical">
+            <h3>🏥 Медицинские учреждения</h3>
+            <p><strong>👨‍⚕️ Взрослая поликлиника</strong></p>
+            <p>📞 <a href="tel:+73952466627">+7(3952)46-66-27</a></p>
+            <p class="note">мкр. Юбилейный, д. 35</p>
+            <p>🌐 <a href="https://irk-gb6.gosuslugi.ru/" target="_blank">https://irk-gb6.gosuslugi.ru/</a></p>
+
+            <p style="margin-top: 10px;"><strong>👶 Детская поликлиника</strong></p>
+            <p>📞 <a href="tel:+73952505105">+7(3952)505-105</a></p>
+            <p class="note">ул. Академическая, д. 60</p>
+            <p class="note">Вторник — день здорового ребёнка</p>
+            <p>🌐 <a href="https://irgdp6.gosuslugi.ru/" target="_blank">https://irgdp6.gosuslugi.ru/</a></p>
+        </div>
+
+        <!-- ===== ПРАВОПОРЯДОК ===== -->
+        <div class="contact-block police">
+            <h3>👮 Правопорядок</h3>
+            <p><strong>Дежурный отдела полиции ОП-2</strong></p>
+            <p>📞 <a href="tel:+73952420451">+7(3952)42-04-51</a></p>
+            <p class="note">ул. Бродского, д. 2а</p>
+        </div>
+
+        <!-- ===== НАВИГАЦИЯ ===== -->
+        <div class="nav-links">
+            <a href="rules.html" class="nav-link">📋 Правила чата</a>
+            <a href="contacts.html" class="nav-link active">📞 Полезные телефоны</a>
+        </div>
+
+        <!-- ===== ФУТЕР ===== -->
+        <div class="footer-note">
+            <span>ЖК «Якоби-Парк» • Живу на берегу</span>
+        </div>
+    </div>
+</body>
+</html>
