@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты · ЖК «Якоби-Парк»</title>
     <link rel="icon" href="favicon.ico">
+
     <style>
         :root {
             --color-link: #2aabee;
             --color-link-hover: #1b8bc9;
+
+            --color-text: #2d3a4a;
+            --color-heading: #1a1a2e;
+            --color-muted: #6b7280;
+            --color-light: #f1f5f9;
+            --color-block: #f8fafc;
+            --color-border: #edf2f7;
         }
 
         * {
@@ -43,7 +51,7 @@
             gap: 18px;
             margin-bottom: 22px;
             padding-bottom: 18px;
-            border-bottom: 1px solid #edf2f7;
+            border-bottom: 1px solid var(--color-border);
         }
 
         .logo {
@@ -54,26 +62,30 @@
         }
 
         .header h1 {
-            color: #1a1a2e;
+            color: var(--color-heading);
             font-size: 24px;
             font-weight: 700;
             line-height: 1.2;
         }
 
         .subtitle {
-            color: #6b7280;
+            color: var(--color-muted);
             font-size: 14px;
         }
 
-        .contact {
+        .block {
             margin-bottom: 12px;
             padding: 16px 20px;
-            background: #f8fafc;
-            border-left: 5px solid #2aabee;
+            background: var(--color-block);
+            border-left: 5px solid var(--color-link);
             border-radius: 16px;
         }
 
-        .contact h2 {
+        .block:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .block h2 {
             display: flex;
             align-items: center;
             gap: 8px;
@@ -84,32 +96,36 @@
             line-height: 1.4;
         }
 
-        .phone {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 20px;
-            font-weight: 600;
-            line-height: 1.4;
+        .block p {
+            margin-bottom: 6px;
+            color: var(--color-text);
+            font-size: 15px;
+            line-height: 1.6;
         }
 
-        .phone a,
-        .meta a {
+        .block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .block a {
             color: var(--color-link);
             text-decoration: none;
         }
 
-        .phone a:hover,
-        .meta a:hover {
+        .block a:hover {
             color: var(--color-link-hover);
             text-decoration: underline;
         }
 
-        .meta {
-            margin-top: 2px;
-            color: #6b7280;
-            font-size: 14px;
-            line-height: 1.6;
+        .phone {
+            font-size: 20px !important;
+            font-weight: 600;
+        }
+
+        .note {
+            color: var(--color-muted) !important;
+            font-size: 14px !important;
+            line-height: 1.5 !important;
         }
 
         .color-red {
@@ -139,14 +155,14 @@
         .footer {
             margin-top: 26px;
             padding-top: 18px;
-            border-top: 1px solid #edf2f7;
+            border-top: 1px solid var(--color-border);
             text-align: center;
         }
 
         .footer span {
             display: inline-block;
             padding: 4px 18px;
-            background: #f1f5f9;
+            background: var(--color-light);
             border-radius: 999px;
             color: #475569;
             font-size: 12px;
@@ -162,6 +178,10 @@
                 border-radius: 20px;
             }
 
+            .header {
+                gap: 12px;
+            }
+
             .logo {
                 width: 52px;
                 height: 52px;
@@ -171,83 +191,91 @@
                 font-size: 20px;
             }
 
-            .contact {
+            .block {
                 padding: 14px 16px;
             }
 
             .phone {
-                font-size: 18px;
+                font-size: 18px !important;
             }
         }
     </style>
 </head>
+
 <body>
     <main class="card">
         <header class="header">
-            <img class="logo" src="images/logo-complex.png" alt="ЖК «Якоби-Парк»" width="64" height="64">
+            <img
+                class="logo"
+                src="images/logo-complex.png"
+                alt="ЖК «Якоби-Парк»"
+                width="64"
+                height="64"
+            >
+
             <div>
                 <h1>ЖК «Якоби-Парк»</h1>
                 <p class="subtitle">Полезные телефоны и контакты</p>
             </div>
         </header>
 
-        <div class="contact color-red">
+        <div class="block color-red">
             <h2>🚨 Аварийно-диспетчерская служба</h2>
-            <div class="phone">☎️ <a href="tel:+73952706464">+7 (3952) 70-64-64</a></div>
-            <div class="meta">Круглосуточно</div>
+            <p class="phone">☎️ <a href="tel:+73952706464">+7(3952)70-64-64</a></p>
+            <p class="note">Круглосуточно</p>
         </div>
 
-        <div class="contact color-yellow">
-            <h2>⚡ Энергосбыт</h2>
-            <div class="phone">☎️ <a href="tel:+73952790777">+7 (3952) 790-777</a></div>
-            <div class="meta">Отключение электроэнергии</div>
+        <div class="block color-yellow">
+            <h2>⚡️ Энергосбыт</h2>
+            <p class="phone">☎️ <a href="tel:+73952790777">+7(3952)790-777</a></p>
+            <p class="note">Отключение электроэнергии</p>
         </div>
 
-        <div class="contact color-cyan">
+        <div class="block color-cyan">
             <h2>🛗 Лифтовый сервис</h2>
-            <div class="phone">☎️ <a href="tel:+73952406080">+7 (3952) 40-60-80</a></div>
-            <div class="meta">Круглосуточно</div>
+            <p class="phone">☎️ <a href="tel:+73952406080">+7(3952)40-60-80</a></p>
+            <p class="note">Круглосуточно</p>
         </div>
 
-        <div class="contact color-purple">
+        <div class="block color-purple">
             <h2>🏢 УКМ «Регион Сибири»</h2>
-            <div class="phone">📞 <a href="tel:+73952566995">+7 (3952) 56-69-95</a></div>
-            <div class="meta">с 08:00 до 17:00, обед с 12:00 до 13:00</div>
-            <div class="meta">✉️ <a href="mailto:region-sibiri@bk.ru">region-sibiri@bk.ru</a></div>
-            <div class="meta">🌐 <a href="https://регион-сибири.рф" target="_blank" rel="noopener noreferrer">регион-сибири.рф</a></div>
+            <p class="phone">📞 <a href="tel:+73952566995">+7(3952)56-69-95</a></p>
+            <p class="note">с 08:00 до 17:00, обед с 12:00 до 13:00</p>
+            <p>✉️ <a href="mailto:region-sibiri@bk.ru">region-sibiri@bk.ru</a></p>
+            <p>🌐 <a href="https://xn----btbehqbba4bjsjj.xn--p1ai/" target="_blank">https://регион-сибири.рф</a></p>
         </div>
 
-        <div class="contact color-green">
-            <h2>🏥 Взрослая поликлиника</h2>
-            <div class="phone">📞 <a href="tel:+73952466627">+7 (3952) 46-66-27</a></div>
-            <div class="meta">мкр. Юбилейный, д. 35</div>
-            <div class="meta">🌐 <a href="https://irk-gb6.gosuslugi.ru/" target="_blank" rel="noopener noreferrer">irk-gb6.gosuslugi.ru</a></div>
-        </div>
-
-        <div class="contact color-green">
-            <h2>👶 Детская поликлиника</h2>
-            <div class="phone">📞 <a href="tel:+73952505105">+7 (3952) 505-105</a></div>
-            <div class="meta">ул. Академическая, д. 60</div>
-            <div class="meta">Вторник — день здорового ребёнка</div>
-            <div class="meta">🌐 <a href="https://irgdp6.gosuslugi.ru/" target="_blank" rel="noopener noreferrer">irgdp6.gosuslugi.ru</a></div>
-        </div>
-
-        <div class="contact color-red">
+        <div class="block color-red">
             <h2>🏛️ Единая дежурная диспетчерская служба г. Иркутска</h2>
-            <div class="phone">☎️ <a href="tel:+73952520112">+7 (3952) 520-112</a></div>
-            <div class="meta">Координация действий аварийных служб города по ЖКХ</div>
+            <p class="phone">☎️ <a href="tel:+73952520112">+7(3952)520-112</a></p>
+            <p class="note">Координация действий аварийных служб города по жилищно-коммунальному хозяйству</p>
         </div>
 
-        <div class="contact color-orange">
+        <div class="block color-green">
+            <h2>🏥 Взрослая поликлиника</h2>
+            <p class="phone">📞 <a href="tel:+73952466627">+7(3952)46-66-27</a></p>
+            <p class="note">мкр. Юбилейный, д. 35</p>
+            <p>🌐 <a href="https://irk-gb6.gosuslugi.ru/" target="_blank">https://irk-gb6.gosuslugi.ru/</a></p>
+        </div>
+
+        <div class="block color-green">
+            <h2>👶 Детская поликлиника</h2>
+            <p class="phone">📞 <a href="tel:+73952505105">+7(3952)505-105</a></p>
+            <p class="note">ул. Академическая, д. 60</p>
+            <p class="note">Вторник - день здорового ребёнка</p>
+            <p>🌐 <a href="https://irgdp6.gosuslugi.ru/" target="_blank">https://irgdp6.gosuslugi.ru/</a></p>
+        </div>
+
+        <div class="block color-orange">
             <h2>🚔 ОБДПС (батальон) ГИБДД ГУ МВД России по Иркутской области</h2>
-            <div class="phone">📞 <a href="tel:+73952217601">+7 (3952) 217-601</a></div>
-            <div class="meta">Информация об эвакуации автомобилей</div>
+            <p class="phone">📞 <a href="tel:+73952217601">+7(3952)217-601</a></p>
+            <p class="note">Информация об эвакуации автомобилей</p>
         </div>
 
-        <div class="contact color-orange">
+        <div class="block color-orange">
             <h2>👮 Дежурный отдела полиции ОП-2</h2>
-            <div class="phone">📞 <a href="tel:+73952420451">+7 (3952) 42-04-51</a></div>
-            <div class="meta">ул. Бродского, д. 2а</div>
+            <p class="phone">📞 <a href="tel:+73952420451">+7(3952)42-04-51</a></p>
+            <p class="note">ул. Бродского, д. 2а</p>
         </div>
 
         <footer class="footer">
