@@ -77,20 +77,20 @@
         .tab-btn {
             flex: 1;
             padding: 10px 16px;
-            border: none;
+            border: 0;
             background: transparent;
             border-radius: 40px;
-            font-family: inherit;
+            color: #6b7280;
+            font: inherit;
             font-size: 15px;
             font-weight: 600;
-            color: #6b7280;
             cursor: pointer;
             transition: all .25s ease;
         }
 
         .tab-btn:hover {
-            color: #1f2937;
             background: rgba(255, 255, 255, .5);
+            color: #1f2937;
         }
 
         .tab-btn.active {
@@ -101,22 +101,10 @@
 
         .tab-content {
             display: none;
-            animation: fadeIn .3s ease;
         }
 
         .tab-content.active {
             display: block;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(8px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         .block {
@@ -127,7 +115,7 @@
             border-radius: 16px;
         }
 
-        .block h4 {
+        .block h2 {
             display: flex;
             align-items: center;
             gap: 8px;
@@ -150,11 +138,11 @@
         }
 
         .block ul {
-            padding-left: 20px;
             margin: 4px 0 2px;
+            padding-left: 20px;
         }
 
-        .block ul li {
+        .block li {
             margin-bottom: 4px;
             color: #2d3a4a;
             font-size: 15px;
@@ -162,7 +150,7 @@
             list-style-type: disc;
         }
 
-        .block ul li:last-child {
+        .block li:last-child {
             margin-bottom: 0;
         }
 
@@ -204,7 +192,7 @@
             font-weight: 600;
         }
 
-        .full-rules h2:first-of-type {
+        .full-rules h2:first-child {
             margin-top: 4px;
         }
 
@@ -223,11 +211,11 @@
         }
 
         .full-rules ul {
-            padding-left: 24px;
             margin: 6px 0 14px;
+            padding-left: 24px;
         }
 
-        .full-rules ul li {
+        .full-rules li {
             margin-bottom: 6px;
             color: #2d3a4a;
             font-size: 15px;
@@ -302,18 +290,18 @@
 
         <div id="short" class="tab-content active">
             <div class="block color-yellow">
-                <h4>💬 Основные принципы общения</h4>
+                <h2>💬 Основные принципы общения</h2>
                 <p>Уважайте друг друга, не используйте нецензурную лексику, не обсуждайте политику и религию, личные вопросы решайте в личных сообщениях.</p>
             </div>
 
             <div class="block color-green">
-                <h4>✅ Объявления (разрешено)</h4>
+                <h2>✅ Объявления (разрешено)</h2>
                 <p>Потерянные/найденные вещи и животные, «отдам даром», помощь соседей, оповещения о ЧП, вопросы ЖКХ.</p>
             </div>
 
-            <!--            
+            <!--
             <div class="block color-cyan">
-                <h4>📎 Объявления размещайте в соответствующей теме чата</h4>
+                <h2>📎 Объявления размещайте в соответствующей теме чата</h2>
                 <p>так они дольше остаются на виду. Недопустимо обсуждение в теме объявлений - для этого используйте общий чат.</p>
             </div>
             -->
@@ -323,7 +311,7 @@
             </div>
 
             <div class="block color-red">
-                <h4>🚫 Реклама (запрещено)</h4>
+                <h2>🚫 Реклама (запрещено)</h2>
                 <p>Любые платные услуги (бытовые, транспортные, образовательные, бьюти и иные), продажа товаров, приглашения в магазины/каналы.</p>
             </div>
 
@@ -332,7 +320,7 @@
             </div>
 
             <div class="block color-green">
-                <h4>⚖ Исключения</h4>
+                <h2>⚖ Исключения</h2>
                 <p>Разовая продажа личных вещей и объектов недвижимости (квартиры, машино-места, кладовые).</p>
                 <p>Объявление публикуется один раз, дальнейшее обсуждение - в личных сообщениях. Повторное размещение в течение 2 месяцев считается рекламой.</p>
             </div>
@@ -365,6 +353,7 @@
             <p><strong>3.6. Политика и острые темы.</strong> Политические обсуждения, агитация, религиозная пропаганда и иные темы, не связанные с жизнью ЖК и района, запрещены.</p>
 
             <h2>4. Размещение информации</h2>
+
             <h3>4.1. Разрешено (некоммерческие сообщения)</h3>
             <ul>
                 <li>Потерянное/найденное (ключи, документы, карты, вещи, животные).</li>
@@ -375,7 +364,7 @@
                 <li>Вопросы содержания домов и придомовой территории.</li>
             </ul>
 
-            <!--            
+            <!--
             <p><strong>4.1.1.</strong> Объявления размещаются в соответствующей теме. Комментарии в теме объявлений не допускаются, чтобы не засорять ленту. Обсуждение - в общем чате.</p>
             -->
 
@@ -416,28 +405,19 @@
     </main>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var tabs = document.querySelectorAll('.tab-btn');
-            var contents = {
-                short: document.getElementById('short'),
-                full: document.getElementById('full')
-            };
+        const tabs = document.querySelectorAll(".tab-btn");
+        const contents = document.querySelectorAll(".tab-content");
 
-            tabs.forEach(function(btn) {
-                btn.addEventListener('click', function() {
-                    tabs.forEach(function(b) {
-                        b.classList.remove('active');
-                    });
-                    this.classList.add('active');
+        tabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+                const target = tab.dataset.tab;
 
-                    for (var key in contents) {
-                        contents[key].classList.remove('active');
-                    }
+                tabs.forEach(item => {
+                    item.classList.toggle("active", item === tab);
+                });
 
-                    var tabId = this.getAttribute('data-tab');
-                    if (contents[tabId]) {
-                        contents[tabId].classList.add('active');
-                    }
+                contents.forEach(content => {
+                    content.classList.toggle("active", content.id === target);
                 });
             });
         });
