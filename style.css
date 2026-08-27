@@ -210,16 +210,6 @@ a {
     text-align: center;
 }
 
-.footer-home {
-    margin-top: 32px;
-    padding-top: 20px;
-    border-top-color: #f0f2f5;
-}
-
-.footer-messenger {
-    margin-top: 20px;
-}
-
 .home-card {
     max-width: 420px;
     padding: 48px 40px 40px;
@@ -381,6 +371,11 @@ a {
     color: #4b5563;
     font-size: 14px;
     line-height: 1.6;
+}
+
+.qr-label strong {
+    color: var(--color-heading);
+    font-weight: 600;
 }
 
 .instruction {
