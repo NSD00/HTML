@@ -209,10 +209,6 @@ a {
 }
 
 .footer span {
-    display: inline-block;
-    padding: 4px 18px;
-    background: var(--color-soft);
-    border-radius: var(--radius-pill);
     color: #475569;
     font-size: 12px;
 }
@@ -389,11 +385,6 @@ a {
 }
 
 .qr-label span {
-    display: inline-block;
-    margin-top: 4px;
-    padding: 2px 10px;
-    border-radius: 12px;
-    background: #eef2f6;
     color: var(--color-muted);
     font-size: 12px;
 }
