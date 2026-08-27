@@ -6,6 +6,16 @@
     <title>Контакты · ЖК «Якоби-Парк»</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <style>
+        :root {
+            --color-red: #ef4444;
+            --color-yellow: #facc15;
+            --color-cyan: #06b6d4;
+            --color-purple: #8b5cf6;
+            --color-green: #22c55e;
+            --color-orange: #f59e0b;
+            --color-blue: #2aabee;
+            --color-blue-hover: #1b8bc9;
+        }
         * {
             margin: 0;
             padding: 0;
@@ -57,7 +67,7 @@
             border-radius: 16px;
             padding: 16px 20px;
             margin-bottom: 12px;
-            border-left: 5px solid #2aabee;
+            border-left: 5px solid var(--color-blue);
         }
         .contact:last-child {
             margin-bottom: 0;
@@ -79,12 +89,12 @@
             gap: 6px;
         }
         .contact .phone a {
-            color: #2aabee;
+            color: var(--color-blue);
             text-decoration: none;
         }
         .contact .phone a:hover {
             text-decoration: underline;
-            color: #1b8bc9;
+            color: var(--color-blue-hover);
         }
         .contact .meta {
             font-size: 14px;
@@ -93,29 +103,29 @@
             margin-top: 2px;
         }
         .contact .meta a {
-            color: #2aabee;
+            color: var(--color-blue);
             text-decoration: none;
         }
         .contact .meta a:hover {
             text-decoration: underline;
         }
         .color-red {
-            border-left-color: #ef4444;
+            border-left-color: var(--color-red);
         }
         .color-yellow {
-            border-left-color: #facc15;
+            border-left-color: var(--color-yellow);
         }
         .color-cyan {
-            border-left-color: #06b6d4;
+            border-left-color: var(--color-cyan);
         }
         .color-purple {
-            border-left-color: #8b5cf6;
+            border-left-color: var(--color-purple);
         }
         .color-green {
-            border-left-color: #22c55e;
+            border-left-color: var(--color-green);
         }
         .color-orange {
-            border-left-color: #f59e0b;
+            border-left-color: var(--color-orange);
         }
         .footer {
             margin-top: 26px;
@@ -132,9 +142,12 @@
             display: inline-block;
         }
         @media (max-width: 550px) {
+            body {
+                padding: 16px 12px;
+            }
             .card {
-                padding: 20px 16px;
-                border-radius: 24px;
+                padding: 16px 14px;
+                border-radius: 20px;
             }
             .logo {
                 width: 52px;
@@ -155,7 +168,7 @@
 <body>
     <div class="card">
         <header class="header">
-            <img src="images/logo-complex.png" alt="ЖК «Якоби-Парк»" class="logo" width="64" height="64" loading="lazy" />
+            <img src="images/logo-complex.png" alt="ЖК «Якоби-Парк»" class="logo" width="64" height="64" />
             <div>
                 <h1>ЖК «Якоби-Парк»</h1>
                 <p class="sub">Полезные телефоны и контакты</p>
@@ -163,17 +176,17 @@
         </header>
         <section class="contact color-red">
             <h3>🚨 Аварийно-диспетчерская служба</h3>
-            <div class="phone">☎️ <a href="tel:+73952706464">+7 (3952) 70-64-64</a></div>
+            <div class="phone">📞 <a href="tel:+73952706464">+7 (3952) 70-64-64</a></div>
             <div class="meta">Круглосуточно</div>
         </section>
         <section class="contact color-yellow">
             <h3>⚡ Энергосбыт</h3>
-            <div class="phone">☎️ <a href="tel:+73952790777">+7 (3952) 790-777</a></div>
+            <div class="phone">📞 <a href="tel:+73952790777">+7 (3952) 790-777</a></div>
             <div class="meta">Отключение электроэнергии</div>
         </section>
         <section class="contact color-cyan">
             <h3>🛗 Лифтовый сервис</h3>
-            <div class="phone">☎️ <a href="tel:+73952406080">+7 (3952) 40-60-80</a></div>
+            <div class="phone">📞 <a href="tel:+73952406080">+7 (3952) 40-60-80</a></div>
             <div class="meta">Круглосуточно</div>
         </section>
         <section class="contact color-purple">
@@ -185,7 +198,7 @@
         </section>
         <section class="contact color-red">
             <h3>🏛️ Единая дежурная диспетчерская служба г. Иркутска</h3>
-            <div class="phone">☎️ <a href="tel:+73952520112">+7 (3952) 520-112</a></div>
+            <div class="phone">📞 <a href="tel:+73952520112">+7 (3952) 520-112</a></div>
             <div class="meta">Координация действий аварийных служб города по ЖКХ</div>
         </section>
         <section class="contact color-green">
