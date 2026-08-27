@@ -5,9 +5,7 @@
     --color-max-dark: #6d28d9;
     --color-text: #2d3a4a;
     --color-heading: #1a1a2e;
-    --color-heading-secondary: #1f2937;
     --color-muted: #6b7280;
-    --color-muted-light: #9ca3af;
     --color-background: #f8fafc;
     --color-surface: #ffffff;
     --color-soft: #f1f5f9;
@@ -117,7 +115,7 @@ button {
     align-items: center;
     gap: 8px;
     margin-bottom: 6px;
-    color: var(--color-heading-secondary);
+    color: #1f2937;
     font-size: 15px;
     font-weight: 700;
     line-height: 1.4;
@@ -135,37 +133,37 @@ button {
     color: var(--color-link);
 }
 .phone {
-    font-size: 20px !important;
+    font-size: 20px;
     font-weight: 600;
 }
 .note {
-    color: var(--color-muted) !important;
-    font-size: 14px !important;
-    line-height: 1.5 !important;
+    color: var(--color-muted);
+    font-size: 14px;
+    line-height: 1.5;
 }
-.color-red {
+.accent-red {
     border-left-color: var(--color-red);
 }
-.color-yellow {
+.accent-yellow {
     border-left-color: var(--color-yellow);
 }
-.color-cyan {
+.accent-cyan {
     border-left-color: var(--color-cyan);
 }
-.color-purple {
+.accent-purple {
     border-left-color: var(--color-purple);
 }
-.color-green {
+.accent-green {
     border-left-color: var(--color-green);
 }
-.color-orange {
+.accent-orange {
     border-left-color: var(--color-orange);
 }
 .footer {
     margin-top: 26px;
     padding-top: 18px;
     border-top: 1px solid var(--color-border);
-    color: var(--color-muted-light);
+    color: #9ca3af;
     font-size: 13px;
     text-align: center;
 }
@@ -194,12 +192,12 @@ button {
     color: var(--color-muted);
     font-size: 16px;
 }
-.links {
+.messenger-links {
     display: flex;
     flex-direction: column;
     gap: 14px;
 }
-.btn {
+.messenger-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -214,22 +212,22 @@ button {
     box-shadow: var(--shadow-button);
     transition: transform .25s ease, box-shadow .25s ease;
 }
-.btn:hover {
+.messenger-button:hover {
     transform: translateY(-3px);
     color: #fff;
     text-decoration: none;
     box-shadow: 0 8px 24px rgba(0, 0, 0, .15);
 }
-.btn:active {
+.messenger-button:active {
     transform: scale(.97);
 }
-.btn-telegram {
+.messenger-button-telegram {
     background: linear-gradient(145deg, var(--color-link), var(--color-link-hover));
 }
-.btn-max {
+.messenger-button-max {
     background: linear-gradient(145deg, var(--color-max), var(--color-max-dark));
 }
-.btn img {
+.messenger-button img {
     width: 32px;
     height: 32px;
     padding: 2px;
@@ -346,7 +344,7 @@ button {
 }
 .tab-btn:hover {
     background: rgba(255, 255, 255, .5);
-    color: var(--color-heading-secondary);
+    color: #1f2937;
 }
 .tab-btn.active {
     background: #fff;
@@ -376,7 +374,7 @@ button {
 }
 .full-rules h3 {
     margin: 22px 0 10px;
-    color: var(--color-heading-secondary);
+    color: #1f2937;
     font-size: 17px;
     font-weight: 600;
 }
@@ -422,7 +420,7 @@ button {
         padding: 14px 16px;
     }
     .phone {
-        font-size: 18px !important;
+        font-size: 18px;
     }
     .home-card {
         padding: 32px 20px 24px;
@@ -438,7 +436,7 @@ button {
         margin-bottom: 26px;
         font-size: 15px;
     }
-    .btn {
+    .messenger-button {
         padding: 14px 20px;
         font-size: 17px;
     }
